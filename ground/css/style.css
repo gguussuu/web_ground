@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg04.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 1645px;
+    height: 131px;
+}
+
+.cloud img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cloudAni01 60s linear infinite;
+}
+.cloud img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 1000px;
+    animation: cloudAni 50s linear infinite;
+}
+.cloud img:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 500px;
+    animation: cloudAni 50s linear infinite;
+}
+.cloud img:nth-child(4) {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    animation: cloudAni 70s linear infinite;
+}
+.cloud img:nth-child(5) {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    animation: cloudAni 80s linear infinite;
+}
+
+@keyframes cloudAni01 {
+    from {
+        margin-left: 0;
+    }
+    to {
+         margin-left: 100%;
+    }
+}
+@keyframes cloudAni {
+    from {
+         margin-left: -500px;
+    }
+    to {
+         margin-left: 100%;
+    }
+}
+
+.fly{
+    width: 37px;
+    height: 48px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.balloon{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 230px;
+    right: 350px;
+}
+.balloon img{
+    animation: flyAni 7s infinite;
+}
+@keyframes flyAni{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-500px);
+    }
+    100%{
+       transform: translateY(0);
+    }
+}
+.horse {
+    width: 210px;
+    height: 214px;
+    background: url(../images/horsebg02.png);
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translateY(-50%);
+}
+
+.horse img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 117px;
+    height: 185px;
+    transform-origin: bottom;
+    animation: horseAni 2s infinite;
+}
+
+@keyframes horseAni {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+.horse01 {
+  width: 210px;
+    height: 214px;
+    background: url(../images/horsebg02.png);
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
+
+.horse01 img {
+    position: absolute;
+    top: 0;
+    left: 35px;
+    transform-origin: bottom;
+    animation: horseAni01 5s infinite;
+}
+@keyframes horseAni01 {
+    0% {
+       top:-15px;
+    }
+    50% {
+        top:15px;
+    }
+    100% {
+        top:-15px;
+    }
+}
+
+.bar {
+    width: 248px;
+    height: 227px;
+    background: url(../images/bar01.png);
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+}
+.bar .txt{
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #111;
+    cursor: pointer;
+}
+.bar img {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+.bar img.on{
+     animation: barAni 3s infinite;
+}
+@keyframes barAni {
+    0& {
+        left: -30px;
+    }
+    50% {
+        left: 30px;
+    }
+    100% {
+        left: -30px;
+    }
+}
+
+.seesaw {
+    position: absolute;
+    width: 392px;
+    height: 333px;
+    top: 30%;
+    right: 10%;
+    background: url(../images/seesaw_bg.png);
+}
+
+.seesaw img {
+    position: absolute;
+    animation: seesaw01 5s infinite;
+}
+
+
+@keyframes seesaw01 {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+
+.spin {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    width: 293px;
+    height: 314px;
+}
+
+.spin img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 293px;
+    height: 314px;
+    transform: rotate(0);
+    transition: all 0.6s;
+}
+
+.spin img:hover {
+    transform: rotate(360deg);
+}
+.slider01{
+    position: absolute;
+    left: 350px;
+    top: 300px;
+    width: 281px;
+    height: 418px;
+    background: url(../images/slide01.png);
+}
+.slider01 .txt{
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #111;
+    cursor: pointer;
+}
+.slider01 .txt::after{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 20px 18px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -10px;
+left: 55px;
+    box-sizing: border-box;
+}
+.slider01 img{
+    position: absolute;
+    top: 0;
+    left: -40px;
+/*    animation: slide 2s infinite;*/
+}
+.slider01 img.on{
+     animation: slide 2s infinite;
+}
+@keyframes slide{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+          transform: translate(-45px,130px);
+    }
+}
+.swing{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    background: url(../images/swing_bg.png);
+    width: 282px;
+    height: 277px;
+}
+.swing img{ 
+    position: absolute;
+    top: -30px;
+}
+.swing .txt{
+     width: 70px;
+    height: 40px;
+    border-radius: 30px;
+    position: absolute;
+    top:-40px;
+    left: 105px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #111;
+    cursor: pointer;
+}
+.swing img.on{
+    animation: swingAni 5s infinite;
+    transform-origin: top;
+}
+@keyframes swingAni{
+    0%{
+        transform:rotateX(45deg); 
+    }
+    50%{
+         transform:rotateX(-45deg);
+    }
+    100%{
+         transform:rotateX(45deg);
+    }
+}
+
+.sap{
+    position: absolute;
+    left: 25%;
+    bottom: 15%;
+    background: url(../images/sap_boy.png);
+    width: 487px;
+    height: 302px;
+}
+.sap img{
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+}
+@keyframes sapAni{
+    
+}
+.bench{
+    position: absolute;
+    top: 350px;
+    left: 900px;
+    width: 79px;
+    height: 139px;
+}
+.bicycle{
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    width: 242px;
+    height: 258px;
+}
+.bicycle img:hover{
+    animation: bicycleAni 2s ;
+}
+@keyframes bicycleAni{
+   from{
+        transform: translate(0,0);
+    }
+    to{
+          transform: translate(-100px,500px);
+    }
+}
+
+
+
+
+
+
+
+
+
